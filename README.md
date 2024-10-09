@@ -1,44 +1,117 @@
-# Tasks: 01 Basic Operators
+# SDC JavaScript/TypeScript Web Development Tasks
 
-## Task description
+## Installation
 
-Here are several small tasks. Each of them is located in their own js files.
+### Fork current repository into your account
 
-### evalExpr.js
+1. Navigate to https://github.com/School-of-Digital-Competencies/js-ts-tasks
+2. Click on `Fork` button in the top right corner
+3. Select your personal account in the `Ownder` dropdown
+4. Don't change the `Repository name`
+5. _Uncheck_ button `Copy the main branch only`
+6. Click on `Create fork` button
+7. Navigate to your forked repository
 
-Given k (number). Evaluate the expression: 4 \* (2k - 1)
+### Cloning your forked repository with tasks into your local machine
 
-### volumeCone.js
+1. Navigate to your forker repository and click on blue button `Clone`
+2. In dropdown find section **Clone with SSH** and copy that url git@github:...git
+3. In console on your machine navigate to any folder you like and paste copied url after git clone: `git clone git@github...tasks.git`
+4. Type in yes if console asks you about fingerprint
+5. After cloning is done, in console type in `cd js-ts-tasks` and click Enter
+6. Now you should be in a folder `js-ts-tasks`
+7. In console type in `git config user.name "Name Surname"` where Name is your Name (same as on Github profile) and Surname is your Surname (same as on Github profile). **Your name should be written in English**. **Don't remove " " symbols**
+8. In console type in `git config user.email youremailaddress@student.ehu.lt` where `youremailaddress@student.ehu.lt` is your address you used to register on Github (the same as on Github profile)
+9. In console type in `git config user.name` and click Enter. You should see your name
+10. In console type in `git config user.email` and click Enter. You should see your email address
 
-Given height h and radius r of a cone. Evaluate [volume of a cone](https://www.cuemath.com/measurement/volume-of-cone/).
+## How to solve Hometasks
 
-### divider.js
+We are using different branches for your hometasks
 
-Given number n and number k. Find the whole part and the remainder of the integer division of n by k. Return a string formatted "wholePart remainder" with one space symbol between two wholePart number and remainder number.
+```
+main - used for general repository instructions
+```
 
-### digitsSum.js
+Each branch starting with `hometasks-...` contains a set of tasks dedicated to the lecture module.
 
-Given number n (0 <= n <= 1000000). Create a function that counts sum of all digits
+```
+hometasks-sections-hero
+hometasks-sections-forms
+...
+```
 
-### backToFront.js
+To solve each hometask you must checkout to the related branch into your local cloned repository
 
-Copy and paste defined amount of a string's symbols to the front and back of a string
+## How to copy new hometasks into your already forked repository
 
-### compareSalary.js
+### One-time installation step
 
-Compare three salaries and find the difference between the max and the min
+Please add remote branch linking into your local git
 
-### compareTwoNumbers.js
+#### Console
 
-Compare two numbers and output a string ">" if the first the greater than the second, "=" if they are equal or required math operator otherwise. All possible strings: "<", ">", "=", "<=", ">="
+To do this, please in console run commands
 
-### sumInRange.js
+```
+git remote rm upstream
 
-Find a sum in a range of consecutive numbers
+git remote add upstream https://github.com/school-of-digital-competencies/js-ts-tasks
+```
 
-### sumTwoNumbers.js
+#### Visual Studio Code
 
-Find a sum of two numbers
+In Source Control menu click on three dots -> Remote -> Add remote -> Paste `https://github.com/school-of-digital-competencies/js-ts-tasks` -> Enter upstream
+
+**NOTE** You might need to remove previously created upstream. In Source Control menu click on three dots -> Remote -> Remove remote -> upstream.
+
+### How to start solving new tasks (get new branches into your Git)
+
+#### Console
+
+When the linking is created (see instructions above), run command `git fetch upstream` to get a new branch with tasks.
+
+Type `git branch -a` to ensure you see in a list lines like `remotes/upstream/hometasks-...`.
+
+Assuming the new branch (with new tasks you haven't solved yet) is `hometasks-simple-tasks`.
+
+Type `git switch hometasks-simple-tasks`. If you see two messages
+
+```
+Branch 'hometasks-simple-tasks' set up to track remote branch 'hometasks-simple-tasks' from 'upstream'
+Switched to a new branch 'hometasks-simple-tasks'
+```
+
+Then you did it correctly.
+
+Now the next step is to publish that branch into your Git repositry (origin). Run command `git push -u origin`. You should see a list of messages containing that line:
+
+```
+...
+To github.com:YOUR_NAME/js-ts-tasks.git
+* [new branch]     hometasks-simple-tasks -> hometasks-simple-tasks
+...
+```
+
+You're done, now you could write solutions for your task.
+
+#### Visual Studio Code
+
+Now when the linking is created, In Source Control menu click on three dots -> Pull, Push -> Fetch From All Remotes menu item to get a new branch with tasks.
+
+Then checkout/switch to that branch (`upstream/hometasks-...`)
+
+Now you could create your solution locally.
+
+To prepare for Autocode submit please push your local branch into your repository. In Source Control menu click on three dots -> Pull, Push -> Push to... -> Select **origin (not upstream)**
+
+### How to get tasks updates
+
+#### Console
+
+Sometimes there are improvements in already published tasks. To get new changes from upstream repository you should use `git pull` command.
+
+For example, let's assume there are some updated in `upstream/hometasks-simple-tasks` branch. Run in console `git pull upstream hometasks-simple-tasks` to pull recent changes from remote branch into your local repository.
 
 ## How to run tasks locally
 
