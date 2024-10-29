@@ -113,37 +113,18 @@ Sometimes there are improvements in already published tasks. To get new changes 
 
 For example, let's assume there are some updated in `upstream/hometasks-simple-tasks` branch. Run in console `git pull upstream hometasks-simple-tasks` to pull recent changes from remote branch into your local repository.
 
+## Step before starting working on tasks
+
+1. You need to execute the command npm install in the console. (1 time step)
+
 ## How to run tasks locally
 
-The following commands are useful to run your code locally
+1. Switch to the tasks branch you would like to solve
+2. Each task has its own instructions in README.md
 
-### Run all tasks at once
+## How to submit solution to Moodle
 
-`npm run test:local` - iterates throught all `src/*.js` files and test your solutions
-
-### Run a certain task
-
-You could specify a name of each individual task to run that locally
-
-`npm run test:local:backToFront` - run test cases only for `backToFront` task
-`npm run test:local:sum` - run test cases only for `sum` task
-
-A list of available commands is specified in `package.json` file in `scripts` section
-
-## Commit message rules
-
-Please follow `Commit message rules` instructions provided on `main` branch.
-
-## Evaluation criterias - max 10 points
-
-If a task passes all of its test cases, then it gives its maximum points assigned for that task
-
-- backToFront: 1 point(s)
-- compareSalary: 1 point(s)
-- compareTwoNumbers: 1 point(s)
-- digitsSum: 2 point(s)
-- divider: 1 point(s)
-- evalExpr: 1 point(s)
-- sumInRange: 1 point(s)
-- sumTwoNumbers: 1 point(s)
-- volumeCone: 1 point(s)
+1. Develop a solution
+2. Commit your solution
+3. _Push your solution to your forked repository_
+4. Submit a link to the branch with solution in your forked repository to the moodle
