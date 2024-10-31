@@ -125,6 +125,10 @@ For example, let's assume there are some updated in `upstream/hometasks-simple-t
 ## How to submit solution to Moodle
 
 1. Develop a solution
+<<<<<<< HEAD
 2. Commit your solution
+=======
+2. Commit your solution. You need to follow the next commit message pattern: `feat: {commit message}` or `fix: {commit message}` e.g. `feat: solved task 1` or `fix: fixed comments` for task 3
+>>>>>>> 93c8449 (fix: fix readme.md)
 3. _Push your solution to your forked repository_
 4. Submit a link to the branch with solution in your forked repository to the moodle
