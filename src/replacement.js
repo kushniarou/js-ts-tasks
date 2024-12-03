@@ -8,5 +8,13 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.map(num => {
+    const numStr = Math.abs(num).toString(); // Преобразуем число в строку
+    const digitCount = numStr.length; // Количество цифр в числе
+
+    if (digitCount === 1) return 1;
+    if (digitCount === 2) return 2;
+    if (digitCount === 3) return 3;
+    return 4; // Для чисел с более чем тремя цифрами
+  });
 };
