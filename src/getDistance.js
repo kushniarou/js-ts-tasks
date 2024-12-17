@@ -7,8 +7,8 @@
  * @returns {number}
  */
 module.exports.getDistance = function getDistance(firstPoint, secondPoint) {
-  const dx = secondPoint.X - firstPoint.X; // Разница по оси X
-  const dy = secondPoint.Y - firstPoint.Y; // Разница по оси Y
-  const distance = Math.sqrt(dx * dx + dy * dy); // Евклидово расстояние
-  return Math.round(distance * 100) / 100; // Округление до двух знаков после запятой
+  const dx = secondPoint.X - firstPoint.X;
+  const dy = secondPoint.Y - firstPoint.Y;
+  const distance = Math.sqrt(dx * dx + dy * dy);
+  return Math.round(distance * 100) / 100;
 };

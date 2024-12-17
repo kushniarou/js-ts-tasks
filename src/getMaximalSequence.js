@@ -16,11 +16,10 @@ module.exports.getMaximalSequence = function getMaximalSequence(arr) {
       if (currentSequence.length > maxSequence.length) {
         maxSequence = currentSequence;
       }
-      currentSequence = [arr[i]]; // Start a new sequence
+      currentSequence = [arr[i]];
     }
   }
 
-  // Check the last sequence in case it was the longest
   if (currentSequence.length > maxSequence.length) {
     maxSequence = currentSequence;
   }

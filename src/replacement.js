@@ -9,12 +9,12 @@
  */
 module.exports.replacement = function replacement(arr) {
   return arr.map(num => {
-    const numStr = Math.abs(num).toString(); // Преобразуем число в строку
-    const digitCount = numStr.length; // Количество цифр в числе
+    if (num === 0) return 1;
+    const digitCount = Math.floor(Math.log10(Math.abs(num))) + 1;
 
     if (digitCount === 1) return 1;
     if (digitCount === 2) return 2;
     if (digitCount === 3) return 3;
-    return 4; // Для чисел с более чем тремя цифрами
+    return 4;
   });
 };
