@@ -17,8 +17,8 @@ module.exports.censorship = function censorship(forbidden) {
   return function (text) {
     forbidden.sort((a, b) => b.length - a.length);
     for (const banned of forbidden) {
-      const regex = new RegExp(banned.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-      text = text.replace(regex, '*'.repeat(banned.length));
+      const regex = new RegExp(`\\b${banned.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+      text = text.replace(regex, match => '*'.repeat(match.length));
     }
     return text;
   };
