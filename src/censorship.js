@@ -14,12 +14,10 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  return function (text) {
-    forbidden.sort((a, b) => b.length - a.length);
-    for (const banned of forbidden) {
-      const regex = new RegExp(`\\b${banned.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
-      text = text.replace(regex, match => '*'.repeat(match.length));
+  return function (argument) {
+    for (let banned of forbidden) {
+      argument = argument.replaceAll(banned, '*'.repeat(banned.length));
     }
-    return text;
+    return argument;
   };
 };

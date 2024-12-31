@@ -4,7 +4,7 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  return function (args) {
-    console.log(args);
+  return function (address) {
+    return `${address['street']}, ${address['house']}, ${address['apartment']}, ${address['city']}, ${address['postalCode']}, ${address['country']}`;
   };
 };
