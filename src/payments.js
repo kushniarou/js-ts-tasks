@@ -1,3 +1,5 @@
+const { Test } = require('mocha');
+
 /**
  * Write a function that returns a function
  * calculating how much money will a person have after all income/debts calculation
@@ -23,5 +25,12 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function calculateIncome(credit, debet) {
+    const totalCredit = TestUtils.sumAllObjectProperties.call(credit);
+    const totalDebet = TestUtils.sumAllObjectProperties.call(debet);
+
+    const netIncome = totalCredit - totalDebet;
+
+    return netIncome;
+  };
 };
