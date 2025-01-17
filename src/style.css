@@ -1,5 +1,256 @@
 /* your css code here  */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Light.woff2') format('woff');
+       url('./assets/fonts/Inter-Medium.woff') format('woff'); 
+      font-weight: 300;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: down;
+  padding: 50px 15px 0px 25px;
+  background-color: #121212;
+  align-items: flex-end;
+}
 
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+    color: #ffffff; 
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    margin: 0;
 }
+
+.profile-image {
+  display: flex;
+  align-items: center; 
+  padding: 10px 0px 10px 20px;
+  background-color: #121212;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 0px 5px 0px 20px;
+  background-color: #121212;
+}
+
+
+.user-details {
+  background-color: #121212;
+  margin: 0px;
+  padding: 10px 0px 0px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.local{
+  color: #8E8E8E;
+}
+
+.link {
+  color: #D4E0ED;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  background-color: #121212;
+}
+
+.btn-follow {
+  background-color: #4192EF;
+  color: #ffffff;
+  border: none;
+  padding: 4px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-message {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 4px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #343434;
+}
+
+.btn-email {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 4px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #343434;
+}
+
+.btn-dropdown {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 4px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #343434;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px 10px 20px;
+  background-color: #121212;
+}
+
+.icon{
+  background-color: #121212;
+  cursor: pointer;
+  all: unset;
+}
+
+.icon img {
+
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px #505050;
+}
+
+.icon p {
+  color: #ffffff;
+  font-size: 11px;
+  text-align: center;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+hr {
+  border: none; 
+  border-top: 1px solid #262626;
+  margin: 0px 0;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #121212;
+  padding: 5px 5px;
+}
+
+.nav-btn-home {
+  background-color: #121212;
+  padding: 4px 25px;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, white 50%, black 50%);
+}
+
+footer {
+  background-color: #121212;
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat strong {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.stat span {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 35px 20px;
+  background-color: #121212;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background-color: #121212;
+} 
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-items: start;
+} 
+
+
+
+
+
